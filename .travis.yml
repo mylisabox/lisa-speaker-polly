@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+- 6
+- 7
+- 8
+notifications:
+  email: false
+  webhooks:
+    urls:
+    - https://webhooks.gitter.im/e/117063f9c1031b17e557
+    on_start: never
+    on_failure: change
+deploy:
+  provider: npm
+  email: hello@mylisabox.com
+  api_key:
+    secure:
+  on:
+    tags: true
+    repo: mylisabox/lisa-speaker-polly
+    node: 8

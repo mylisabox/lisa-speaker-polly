@@ -1,0 +1,36 @@
+{
+  "name": "lisa-speaker-polly",
+  "version": "1.0.0",
+  "description": "L.I.S.A. hook for TTS with Amazon Polly",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mylisabox/lisa-speaker-polly.git"
+  },
+  "keywords": [
+    "mylisabox",
+    "lisa",
+    "tts",
+    "polly"
+  ],
+  "author": "jaumard",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mylisabox/lisa-speaker-polly/issues"
+  },
+  "homepage": "https://github.com/mylisabox/lisa-speaker-polly#readme",
+  "eslintConfig": {
+    "extends": "trails"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.101.0",
+    "speaker": "^0.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.5.0",
+    "eslint-config-trails": "^3.0.0"
+  }
+}
