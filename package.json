@@ -1,6 +1,6 @@
 {
   "name": "lisa-speaker-polly",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "L.I.S.A. hook for TTS with Amazon Polly",
   "main": "index.js",
   "scripts": {
