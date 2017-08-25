@@ -26,8 +26,6 @@ module.exports = {
       sampleRate: 16000
     })
     this.cacheDisabled = config.cacheDisabled
-
-    return Promise.resolve()
   },
 
   repeat: () => {
@@ -42,9 +40,11 @@ module.exports = {
         if (exist) {
           const audioFile = fs.createReadStream(hash)
           audioFile.pipe(this.player)
+
         }
         else {
           const audioFile = fs.createWriteStream(hash)
+
           const params = {
             'Text': text,
             'OutputFormat': 'pcm',
@@ -73,7 +73,6 @@ module.exports = {
               }
             }
           })
-
         }
       })
     })
