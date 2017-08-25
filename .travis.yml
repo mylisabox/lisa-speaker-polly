@@ -14,7 +14,7 @@ deploy:
   provider: npm
   email: hello@mylisabox.com
   api_key:
-    secure:
+    secure: l4z7kZwSsb47huYFfohv2u1lZXEA8OhdSB7FDmRXlmj7r7kIsL272a3tEQYejXBfeMVm0rOqxP10scrJSGnX4x8lembi/KjMso1VdQk+jY17Wt0bXidwVMKrzDoLhiyA93vH/Q5J9szRTamsSIhVQ9QczoNQRGIccR9YsyAPNL1WYvLC6ckVR5aZ3fFcwf+L8s326CTHAK4Z593t0DOULNayd3GZepK/RPTUb4uxvYiEl3G0GCD58x/M5O8c+CzBpojVOYsLZZYYza2kjUy0vY/a4wisZjHAZQj70dbfViRjgxVizyw4ZAauONvpSYGvNGZKaPVFq6cHk/iUxdq2d7Qn9iJ3hr+IBp2AgTTmvtuHSsYlWnx4xapM915e7uClZRgCGeyn+ttfKJ5J1y87l1gppQqrsVOI+b4LH7zBWjQ31Yg03yLmt6Ho9CYHbVM9NxudVvyDr1NLvb+2jGyG7Xoqr+jeSO+xvWhNnyf/xl9rhuWLqXjhEsvuvFDoEwCGTk+XautbCqenpksHrm0sVEzY+TdHuiCdb4qXygsJTbjoXyNmWg6xkf44jUx0dN8ipbUq/3Jj6QMuI+PWehYphjRPW6w8rc/XcbP7YTOi8PHQfcQFVXIivzjfHdPWvVKPp8Ys9pMZNYXMU0P0gQGetOXJAMNgdBldj9Au/pE16AQ=
   on:
     tags: true
     repo: mylisabox/lisa-speaker-polly
