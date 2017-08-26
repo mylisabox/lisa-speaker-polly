@@ -7,6 +7,14 @@ const path = require('path')
 const fs = require('fs')
 const Speaker = require('speaker')
 
+const getPlayer = () => {
+  return new Speaker({
+    channels: 1,
+    bitDepth: 16,
+    sampleRate: 16000
+  })
+}
+
 module.exports = {
   init: (config = {}) => {
     if (!config.region) {
@@ -19,11 +27,6 @@ module.exports = {
     this.polly = new AWS.Polly({
       signatureVersion: 'v4',
       region: config.region
-    })
-    this.player = new Speaker({
-      channels: 1,
-      bitDepth: 16,
-      sampleRate: 16000
     })
     this.cacheDisabled = config.cacheDisabled
   },
@@ -39,8 +42,8 @@ module.exports = {
       fs.exists(hash, exist => {
         if (exist) {
           const audioFile = fs.createReadStream(hash)
-          audioFile.pipe(this.player)
-
+          audioFile.pipe(getPlayer())
+          audioFile.on('close', () => resolve())
         }
         else {
           const audioFile = fs.createWriteStream(hash)
@@ -65,8 +68,9 @@ module.exports = {
                   bufferStream.pipe(audioFile)
                 }
                 // Pipe into Player
-                bufferStream.pipe(this.player)
-                resolve()
+                bufferStream.pipe(getPlayer())
+
+                bufferStream.on('finish', () => resolve())
               }
               else {
                 reject()
