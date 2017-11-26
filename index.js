@@ -21,7 +21,7 @@ module.exports = {
       config.region = 'eu-west-1'
     }
     if (!config.voiceId) {
-      config.voiceId = config.language === 'fr-FR' ? 'Celine' : 'Kimberly'
+      throw new Error('VoiceId is required, please provide one')
     }
     this.config = config
     this.polly = new AWS.Polly({
