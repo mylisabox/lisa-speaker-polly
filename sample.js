@@ -2,7 +2,7 @@
 
 const speaker = require('./index')
 
-speaker.init({ language: 'fr-FR' })
+speaker.init({ language: 'fr-FR', voiceId: 'Celine' })
 
 speaker.speak('Bonjour, je m\'appel lisa, je suis nouvelle par ici ').then(data => {
 }).catch(err => {
