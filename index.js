@@ -48,14 +48,14 @@ class PollySpeaker {
       const exist = await fs.exists(hash);
       if (exist) {
         const speaker = getPlayer();
-        const audioFile = await createReadStream(hash)
+        const audioFile = createReadStream(hash)
         audioFile.on('close', () => {
           resolve();
         });
         audioFile.pipe(speaker);
       }
       else {
-        const audioFile = await createWriteStream(hash)
+        const audioFile = createWriteStream(hash)
 
         const params = {
           'Text': text,
