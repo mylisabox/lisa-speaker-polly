@@ -1,6 +1,4 @@
-'use strict'
-
-const speaker = require('./index')
+import speaker from '../index.js';
 
 speaker.init({ language: 'fr-FR', voiceId: 'Celine' })
 
